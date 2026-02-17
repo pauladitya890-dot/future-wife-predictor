@@ -1,304 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Future Partner Predictor</title>
+<title>Future Wife Predictor❤️🦋✨</title>
 <style>
-/* Body gradient + perspective for 4D effect */
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    overflow:hidden;
+    background:linear-gradient(135deg,#000000,#1a001f);
+    color:Red;
+    font-family:Arial, sans-serif;
     text-align:center;
-    background: linear-gradient(135deg,#ffb3cc,#ff66cc,#ff99ff,#ff33cc);
-    background-size: 400% 400%;
-    animation:gradientBG 20s ease infinite;
-    perspective:1000px;
+    overflow:hidden;
 }
 
-/* Gradient Animation */
-@keyframes gradientBG{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-/* Pulse Heart Animation */
-@keyframes beatHeart{
-    0%{transform:translate(-50%,-50%) scale(1);}
-    50%{transform:translate(-50%,-50%) scale(1.3);}
-    100%{transform:translate(-50%,-50%) scale(1);}
-}
-
-/* Glow text animation */
-@keyframes glow{
-    0%{text-shadow:0 0 5px #ffd700;}
-    100%{text-shadow:0 0 20px #ffcc33;}
-}
-
-/* Landing Page */
 #intro{
     position:absolute;
-    width:100%;
-    height:100%;
+    width:300%;
+    height:300%;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    z-index:2;
-    overflow:hidden;
-    background:red;
+    background:Golden;
+    animation:fadeIn 2s;
 }
 
-/* Big love heart behind Enter */
-#intro::before{
-    content:"❤️";
-    position:absolute;
-    font-size:250px;
-    opacity:0.25;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    animation:beatHeart 1.5s infinite alternate;
-    z-index:1;
-}
-
-/* Sparkles on landing page */
-.sparkle{
-    position:absolute;
-    width:4px;
-    height:4px;
-    background:white;
-    border-radius:50%;
-    opacity:0.7;
-    animation:twinkle 3s infinite;
-    z-index:0;
-}
-
-@keyframes twinkle{
-    0%{opacity:0.2; transform:scale(0.5);}
-    50%{opacity:1; transform:scale(1);}
-    100%{opacity:0.2; transform:scale(0.5);}
-}
-
-/* Buttons */
 button{
-    padding:12px 25px;
+    padding:10px 20px;
     border:none;
-    border-radius:50px;
-    background:#ff3399;
-    color:white;
+    background:#ff0080;
+    color:Pink;
     font-size:16px;
     cursor:pointer;
-    transition:0.3s;
-    z-index:3;
+    border-radius:5px;
 }
 
 button:hover{
-    background:#ff66cc;
-    transform:scale(1.05);
+    background:#ff3399;
 }
 
-/* Main Predictor */
 #main{
     display:none;
-    position:relative;
-    z-index:2;
-    top:50px;
+    margin-top:50px;
 }
 
-/* Inputs with golden border */
 input{
-    padding:10px;
+    padding:8px;
     margin:5px;
-    border-radius:25px;
-    border:3px solid gold;
-    background:rgba(255,255,255,0.2);
-    color:white;
-    font-size:16px;
-    outline:none;
-    text-align:center;
+    border-radius:5px;
+    border:none;
 }
 
-input:focus{
-    border-color:#ffd700;
-    box-shadow:0 0 15px #ffd700;
-}
-
-/* Result */
 #result{
     margin-top:20px;
-    font-size:28px;
+    font-size:24px;
     font-weight:bold;
-    color:#ffcc33;
-    text-shadow:0 0 10px #ffd700;
+    color:#ff66cc;
     animation:glow 1s infinite alternate;
 }
 
-/* Description Box */
-#descBox{
-    margin-top:20px;
-    width:90%;
-    max-width:400px;
-    margin-left:auto;
-    margin-right:auto;
-    padding:15px;
-    background:rgba(255,255,255,0.2);
-    border-radius:15px;
-    border:3px solid gold;
-    font-size:16px;
-    color:white;
-    text-align:center;
-    z-index:2;
+@keyframes glow{
+    from{text-shadow:0 0 10px #ff0080;}
+    to{text-shadow:0 0 20px #ff66cc;}
 }
 
-#descBox h3{
-    font-family:cursive;
-    margin-bottom:10px;
-}
-
-#descBox .logo{
-    font-size:30px;
-    color:#ff3399;
-    animation:beatHeart 1s infinite alternate;
-}
-
-/* Floating hearts layers */
-.bgHeart{
-    position:absolute;
-    width:15px;
-    height:15px;
-    background:red;
-    opacity:0.5;
-    border-radius:50%;
-    transform:rotate(45deg);
-    animation:floatHeart linear infinite;
-    z-index:0;
-}
-
-.bgHeart::before,
-.bgHeart::after{
-    content:'';
-    position:absolute;
-    width:15px;
-    height:15px;
-    background:red;
-    border-radius:50%;
-}
-
-.bgHeart::before{top:-7px; left:0;}
-.bgHeart::after{left:7px; top:0;}
-
-@keyframes floatHeart{
-    0%{transform:translateY(0) rotate(45deg) scale(0.5); opacity:0;}
-    50%{opacity:0.6;}
-    100%{transform:translateY(-800px) rotate(45deg) scale(1.2); opacity:0;}
-}
-
-/* Flying hearts */
-.heart{
-    position:absolute;
-    width:15px;
-    height:15px;
-    background:red;
-    transform:rotate(45deg);
-    animation:flyHeart linear infinite;
-    opacity:0.8;
-    z-index:2;
-}
-
-.heart::before,
-.heart::after{
-    content:'';
-    position:absolute;
-    width:15px;
-    height:15px;
-    background:red;
-    border-radius:50%;
-}
-
-.heart::before{top:-7px; left:0;}
-.heart::after{left:7px; top:0;}
-
-@keyframes flyHeart{
-    0%{transform:translateY(0) rotate(45deg) scale(0.5); opacity:0;}
-    50%{opacity:1;}
-    100%{transform:translateY(-300px) rotate(45deg) scale(1.2); opacity:0;}
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
 }
 </style>
 </head>
 <body>
 
 <div id="intro">
-    <h1>Welcome to Aditya's Love Portal 🔮</h1>
-    <p>Click below to reveal your future partner...</p>
+    <h1>Welcome to Aditya's Destiny Portal 🔮</h1>
+    <p>Click below to reveal your future...❤️✨</p>
     <button onclick="start()">Enter</button>
 </div>
 
 <div id="main">
-    <h2>Future Partner Predictor 💖</h2>
+    <h2>Future Wife First Letter Predictor 🦋💖</h2>
     <input type="text" id="name" placeholder="Enter Your Name"><br>
     <input type="number" id="age" placeholder="Enter Your Age"><br>
     <input type="number" id="lucky" placeholder="Enter Lucky Number"><br>
     <button onclick="predict()">Reveal</button>
 
     <div id="result"></div>
-
-    <div id="descBox">
-        <h3>Write your love message here 💌</h3>
-        <p>Type your cute message or description about your future partner here.</p>
-        <div class="logo">❤️</div>
-    </div>
 </div>
 
 <script>
-// Boys and Girls 32 names
-const boys=[
-    "Aditya","Rahul","Aryan","Karan","Rohan","Vivaan","Siddharth","Aarav",
-    "Ansh","Kabir","Dev","Krishna","Dhruv","Ishaan","Rudra","Samarth",
-    "Yuvraj","Nikhil","Arjun","Varun","Om","Tejas","Shivam","Harsh",
-    "Aman","Vikram","Pranav","Raghav","Jay","Sai","Manav","Kunal"
-];
-
-const girls=[
-    "Riya","Sakshi","Ananya","Aditi","Ishita","Sneha","Pooja","Priya",
-    "Aarohi","Divya","Shreya","Meera","Aanya","Tanvi","Naina","Kavya",
-    "Tanya","Ira","Sanya","Mahi","Pallavi","Nidhi","Ridhima","Aakriti",
-    "Diya","Rashmi","Juhi","Bhavya","Samaira","Esha","Vaishnavi","Simran"
-];
-
-// Seeded random partner name
-function getPartnerName(inputName){
-    inputName = inputName.toLowerCase();
-    let seed = 0;
-    for(let i=0;i<inputName.length;i++){
-        seed += inputName.charCodeAt(i);
-    }
-    seed = seed % 1000;
-
-    let lastChar = inputName[inputName.length-1];
-    let isFemale = "aeiou".includes(lastChar);
-
-    if(isFemale){ // ladki entered -> boy name
-        return boys[seed % boys.length];
-    } else { // ladka entered -> girl name
-        return girls[seed % girls.length];
-    }
-}
-
-/* Landing page sparkles */
-for(let i=0;i<50;i++){
-    let s=document.createElement('div');
-    s.className='sparkle';
-    s.style.left=Math.random()*window.innerWidth+'px';
-    s.style.top=Math.random()*window.innerHeight+'px';
-    s.style.animationDuration=(2+Math.random()*3)+'s';
-    document.body.appendChild(s);
-}
-
 function start(){
     document.getElementById("intro").style.display="none";
     document.getElementById("main").style.display="block";
-    createBackgroundHearts(60);
 }
 
 function predict(){
@@ -311,42 +103,15 @@ function predict(){
         return;
     }
 
-    let partnerName = getPartnerName(name);
+    let Name="Aditi,Akriti,Saurav,Arpita,Archita,Aditya,Kulendra,Shivam,Om,Pahee,Sneha,Doyel,Sristi,Ipshita,Ankit,Uday";
+    let total=name.length + parseInt(age) + parseInt(lucky);
+    let index= total % letters.length;
+    let resultLetter=letters[index];
 
     document.getElementById("result").innerHTML=
-        "✨ Your Future Partner is: "+partnerName+" ✨";
-
-    createHearts(20);
-}
-
-/* Flying hearts */
-function createHearts(num){
-    for(let i=0;i<num;i++){
-        let h=document.createElement("div");
-        h.className="heart";
-        h.style.left=Math.random()*window.innerWidth+"px";
-        h.style.top=(window.innerHeight-100)+"px";
-        h.style.animationDuration=(2+Math.random()*2)+"s";
-        h.style.width=(10+Math.random()*15)+"px";
-        h.style.height=(10+Math.random()*15)+"px";
-        document.body.appendChild(h);
-    }
-}
-
-/* Background floating hearts */
-function createBackgroundHearts(num){
-    for(let i=0;i<num;i++){
-        let h=document.createElement("div");
-        h.className="bgHeart";
-        h.style.left=Math.random()*window.innerWidth+"px";
-        h.style.top=window.innerHeight+Math.random()*100+"px";
-        h.style.animationDuration=(5+Math.random()*5)+"s";
-        h.style.width=(10+Math.random()*20)+"px";
-        h.style.height=(10+Math.random()*20)+"px";
-        h.style.zIndex=Math.floor(Math.random()*2);
-        document.body.appendChild(h);
-    }
+        "✨ Your Future Wife's First Name is: "+resultName+" ✨";
 }
 </script>
+
 </body>
 </html>
