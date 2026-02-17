@@ -103,13 +103,13 @@ function predict(){
         return;
     }
 
-    let Name="Aditi,Akriti,Saurav,Arpita,Archita,Aditya,Kulendra,Shivam,Om,Pahee,Sneha,Doyel,Sristi,Ipshita,Ankit,Uday";
+    let Letter="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let total=name.length + parseInt(age) + parseInt(lucky);
     let index= total % letters.length;
     let resultLetter=letters[index];
 
     document.getElementById("result").innerHTML=
-        "✨ Your Future Wife's First Name is: "+resultName+" ✨";
+        "✨ Your Future Wife's First Letter is: "+resultLetter+" ✨";
 }
 </script>
 
